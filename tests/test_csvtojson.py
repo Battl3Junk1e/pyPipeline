@@ -39,7 +39,7 @@ class TestPipeline(unittest.TestCase):
         for prop in required_properties:
             with self.subTest(property=prop):
 
-                self.assertIn(prop, jsondf.columns, f"{prop} is missing")
+                self.assertIn(prop, jsondf.columns, f"{prop} is missing.")
 
                 self.assertTrue(jsondf[prop].notna().all() and (jsondf[prop] != '').all(), f"{prop} is empty or contains null values")
     def test_will_fail(self):
