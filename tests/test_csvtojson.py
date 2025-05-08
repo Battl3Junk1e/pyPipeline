@@ -42,6 +42,7 @@ class TestPipeline(unittest.TestCase):
                 self.assertIn(prop, jsondf.columns, f"{prop} is missing")
 
                 self.assertTrue(jsondf[prop].notna().all() and (jsondf[prop] != '').all(), f"{prop} is empty or contains null values")
-
+    def test_will_fail(self):
+        self.assertEqual(1,2,"This test is designed to fail.")
 if __name__ == '__main__':
     unittest.main()
