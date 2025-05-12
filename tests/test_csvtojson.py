@@ -15,6 +15,9 @@ jsondf = pandas.read_json("data.json")
 
 class TestPipeline(unittest.TestCase):
 
+    def test_will_pass(self):
+        self.assertTrue( 1 == 1)
+
     def test_file_exist(self):
         self.assertTrue(os.path.isfile("profiles1.csv"))
 
